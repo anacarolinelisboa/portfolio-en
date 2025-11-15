@@ -1,0 +1,150 @@
+:root
+    --main: #0b0b19
+    --secondary: #24243c
+
+.clip-path-after:after
+    z-index: -1
+    clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%)
+.font-inconsolata
+    font-family: 'Inconsolata'
+.font-poppins
+    font-family: 'Poppins'
+body 
+    font-weight: 200 
+    &::-webkit-scrollbar
+        width: 12px
+        background: #ffffff19 
+    &::-webkit-scrollbar-track  
+        border-radius: 10px         
+    &::-webkit-scrollbar-thumb
+        background-image: linear-gradient(to right, #59C4CD, #8e6ccb) 
+        border-radius: 5px  
+.bg-gradient
+    background-image: linear-gradient(to right, #59C4CD, #8e6ccb)
+
+.cases.slick-slider   
+    .slick-list
+        overflow: visible
+    .slick-slide
+        transition: .2s ease
+        &:not(.slick-active)
+            opacity: 0.1  
+.slick-list
+    position: relative
+    display: block 
+    margin: 0
+    padding: 0
+.slick-track
+    position: relative
+    top: 0
+    left: 0
+    display: block
+    margin-left: auto
+    margin-right: auto
+.slick-initialized .slick-slide
+    display: block
+.slick-slide
+    display: none
+    float: left
+    height: 100%
+    min-height: 1px 
+    img 
+        display: block 
+.slick-vertical .slick-slide 
+    display: block
+    height: auto
+    border: 1px solid transparent
+    
+.bg-shadow-hover:hover
+    background-image: linear-gradient(to bottom right, transparent, #151527)
+
+.bg-cases-hover
+    &.active  
+        background-image: linear-gradient(to bottom right, transparent, #151527)
+        span
+            left: 15px
+    span        
+        transition: .2s ease
+        img
+            transform: rotate(90deg)
+    &:not(.active):hover span
+        left: 15px
+        transition: .2s ease
+    
+#scroll-to-top:hover
+    line 
+        stroke: #0b0b19
+
+.btn-hover:hover
+    animation-play-state: paused
+    background-image: linear-gradient(to right, #59C4CD, #8e6ccb) 
+    border: 0
+    path 
+        stroke: #0b0b19
+         
+.bg-titles:after
+    background-image: linear-gradient(to right, #59C4CD, #8e6ccb)  
+
+.bg-top
+    .bg-r, .bg-l
+        transition: left 3s ease-in-out
+
+.fade-in 
+    opacity: 0 
+    animation: fadeIn 1s forwards  
+ 
+.effect-float 
+    transform: translatey(0px)
+    animation: float 3s ease-in-out infinite 
+@keyframes float
+    0%
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6)
+        transform: translatey(0px) 
+    50%
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2)
+        transform: translatey(-10px) 
+    100%
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6)
+        transform: translatey(0px) 
+
+@media (min-width: 701px)  
+    .cases.slick-slider  
+        .slick-slide:not(.slick-active) 
+            > img
+                width: 92%
+                margin-left: 4%
+                margin-right: 4%
+                margin-bottom: auto
+                margin-top: auto
+
+@media (max-width: 700px)  
+    .cases.slick-slider  
+        .slick-slide
+            padding: 0 7px 
+    .bg-top-mobile:after
+        content: ""
+        background: url(../imgs/bg.png)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0.05
+            
+
+@media (min-width: 700px) and (max-width: 1536px)
+    .bg-top
+        .bg-l
+            zoom: .90
+            left: -80px
+        .bg-r
+            zoom: .90
+            right: -50px
+@media (min-width: 1537px)
+    .bg-top
+        .bg-l 
+            zoom: 1.05
+            left: -100px
+        .bg-r 
+            zoom: 1.05
+            right: -90px
